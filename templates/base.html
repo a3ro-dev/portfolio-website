@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="HTML, CSS, JavaScript, graphics designer, artist, web developer, google, maps, memes, developer, fiverr, school, mobile, andrew tate, tate memes, sigma male, top g">
+    <meta name="description" content="Web developer and Graphics Designer">
+    <meta name="author" content="Akshat Singh">
+
+    <title> Aero.Viz </title>
+    <link rel="shortcut icon" href="/static/favicon_io/favicon.ico">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/unicons.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="static/css/tooplate-style.css">
+    
+<!--
+demn
+
+-->
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href=""><i class='uil uil-user'></i> Aero </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    {% comment %} {% load color_mode %}
+
+    <form method="POST" action="{% url 'set_color_mode' %}">
+      {% csrf_token %}
+      <label for="color_mode_select">Color mode:</label>
+      <select id="color_mode_select" name="color_mode">
+        <option value="light"{% if color_mode == 'light' %} selected{% endif %}>Light</option>
+        <option value="dark"{% if color_mode == 'dark' %} selected{% endif %}>Dark</option>
+      </select>
+      <button type="submit">Set</button>
+    </form> {% endcomment %}
+
+
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey folks, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Student</span>
+                                    <span class="animated-item">Web Designer</span>
+                                    <span class="animated-item">Entrepreneur</span>
+                                </div>
+                        </h1>
+
+                        <p>Building a successful product is a challenge. I am highly energetic web development.</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <a href="#" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="static/images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+        <div class="container">
+                
+                <div class="row">
+                  <div class="col-lg-11 text-center mx-auto col-12">
+
+                      <div class="col-lg-8 mx-auto">
+                        <h2>Things I have designed for clients</h2>
+                      </div>
+
+                      <div class="owl-carousel owl-theme">
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="static/images/b1.jpg " class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        {% comment %} <div class="item">
+                          <div class="project-info">
+                            <img src="static/images/b2.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div> {% endcomment %}
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="static/images/g1.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="static/images/t2.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="static/images/t1.jpg" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Experiences</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2018</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Rainbow Esports</span><small>Esports Coaching</small></h3>
+                                  <p><a rel="">Started in 2018, I gained experience regarding esports and mobile gaming industry and also about how team work and co-coordination works in practical life.
+                                    </p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2019</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Cloud Computing</span><small>Servers and Hosting</small></h3>
+                                <p><a rel=""> In 2019, in my free time I as side studies, learnt about servers, hosting and operating systems and vms theoritically. Which I then used to impress my colleagues.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Graphics Designing</h3>
+                                <p><a rel="">In August 2021, Under a few senior discord based graphics designers, I learnt graphics designing and kept the skill lit, and kept polishing it as my side hustle.
+                                  </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Web Development<small>Django.py</small></h3>
+                                <p><a rel="">During working in Graphics Code, I was learning programming languages and one of them was python, then after my resignation I started web development.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">History of Work</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <!-- <div class="timeline-yr">
+                                  <span>2017</span>
+                             </div> -->
+                             <!-- <div class="timeline-info">
+                                  <h3><span>Kidz</span><small>Master Design</small></h3>
+                                  <p>Please tell your friends about Tooplate website. That would be very helpful. We need your support.</p>
+                             </div>
+                        </div> -->
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2018</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Manager</span><small>Work Culture Experiences</small></h3>
+                                <p><a rel="">I worked for many esport clans and organisations which were based on the current trends which got my experience regarding work culture</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Graphics Code</span><small>Time for something cool</small></h3>
+                                <p><a rel="">Now I had enough experience regarding work, business and other things so I started Graphics Code with my friend Bhavya and it also ranked #2 in the asian region, I am no more a part of Graphics Code, I resigned in November 2022. Graphics Code was rebranded to a new company by the action owners</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    {% comment %} <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <!-- <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.558402180099!2d-73.99373482142036!3d40.75895421922642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855b8fb3083%3A0xa0f9aef176042a5c!2sTheater+District%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2smm!4v1549875377188" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div> -->
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <!-- <p class="footer-text mb-0">010 020 0960</p> -->
+                  <p><a href="mailto:aero@domain.com">hello@company.co</a></p>
+                </div>
+
+                <ul class="social-links">
+                     <!-- <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li> -->
+                     <li><a href="https://www.instagram.com/aero.viz" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+                     <!-- <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li> -->
+                </ul>
+            </div>
+          </div> {% endcomment %}
+      <section class="contact py-5" id="contact">
+        <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2> 
+
+               <form action="" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    
+                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                  </div>
+                </div>
+              </form> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+                {% comment %} <button><a rel="nofollow" href="https://www.instagram.com/aero.viz"> Contact Me</button> {% endcomment %}
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2023 Aero.viz . All rights reserved</p>
+                        <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://solo.to/aero.viz">Aero</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/Headroom.js"></script>
+    <script src="static/js/jQuery.headroom.js"></script>
+    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+    <script src="static/js/custom.js"></script>
+
+
+
+
+</body>
+</html>
