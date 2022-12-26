@@ -7,7 +7,8 @@ Try to make your own portfolio website
 
 
 
-Req.
+Requirements
+
 `python 3.10.0`
 `django==4.1.4`
 
